@@ -55,6 +55,9 @@ class Name extends \Gedcom\Parser\Component
                 case 'GIVN':
                     $name->setGivn(trim($record[2]));
                     break;
+                case 'SECG':
+                    $name->setSecg(trim($record[2]));
+                    break;
                 case 'NICK':
                     $name->setNick(trim($record[2]));
                     break;
