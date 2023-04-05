@@ -41,11 +41,13 @@ class Deat extends \Gedcom\Record
     public function setDate($date)
     {
         $this->date = $date;
-        if ($this->getDay()) {
-            $this->dateFormatted = $this->getYear().'-'.$this->getMonth().'-'.substr("0{$this->getDay()}", -2);
-        } else {
-            $this->month = $this->getMonth();
-            $this->year = $this->getYear();
+        if(!$this->getDate()) {
+            if ($this->getDay()) {
+                $this->dateFormatted = $this->getYear().'-'.$this->getMonth().'-'.substr("0{$this->getDay()}", -2);
+            } else {
+                $this->month = $this->getMonth();
+                $this->year = $this->getYear();
+            }
         }
     }
 
