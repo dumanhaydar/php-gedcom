@@ -45,7 +45,7 @@ class Even extends \Gedcom\Parser\Component
                 break;
             case 'DATE':
                 $dat = \Gedcom\Parser\Date::parse($parser);
-                $even->setDate($dat);
+                if(!$even->getDate()) $even->setDate($dat);
                 //$even->setDate(trim($record[2]));
                 break;
             case 'PLAC':

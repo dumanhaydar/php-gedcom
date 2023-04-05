@@ -18,6 +18,7 @@ namespace Gedcom\Record\Indi;
  * @method string getName()
  * @method string getNpfx()
  * @method string getGivn()
+ * @method string getSecg()
  * @method string getNick()
  * @method string getSpfx()
  * @method string getSurn()
@@ -29,6 +30,7 @@ class Name extends \Gedcom\Record implements \Gedcom\Record\Sourceable
     protected $_npfx;
     protected $_givn;
     protected $_nick;
+    protected $_secg;
     protected $_spfx;
     protected $_surn;
     protected $_nsfx;
