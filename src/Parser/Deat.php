@@ -37,7 +37,7 @@ class Deat extends \Gedcom\Parser\Component
 
             switch ($recordType) {
                 case 'DATE':
-                    $deat->setDate(trim($record[2]));
+                    if(!$deat->getDate()) $deat->setDate(trim($record[2]));
                     break;
                 case '_DATI':
                     $deat->setDati(trim($record[2]));

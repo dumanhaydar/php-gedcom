@@ -37,7 +37,7 @@ class Birt extends \Gedcom\Parser\Component
 
             switch ($recordType) {
                 case 'DATE':
-                    $birt->setDate(trim($record[2]));
+                    if(!$birt->getDate()) $birt->setDate(trim($record[2]));
                     break;
                 case '_DATI':
                     $birt->setDati(trim($record[2]));
